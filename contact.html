@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Matilde Perotti</title>
+  <meta name="description" content="Matilde Perotti — Contact">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  
+<header>
+  <nav class="nav" aria-label="Primary">
+    <div class="brand"><a href="index.html" style="text-decoration:none;color:inherit">Matilde Perotti</a></div>
+    <div class="tabs">
+      <a href="index.html">About</a>
+      <a href="publications.html">Publications</a>
+      <a href="research.html">Research</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="cv.html">CV</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
+
+  <main class="container">
+    
+<h1>Contact</h1>
+<div class="card">
+  <p><strong>Email:</strong> matilde.perotti@unibocconi.it</p>
+  <p><strong>Office:</strong> Department of Social and Political Sciences, Bocconi University</p>
+  <p><a class="pill" href="https://www.linkedin.com/in/matilde-perotti/" target="_blank">LinkedIn</a></p>
+</div>
+
+  </main>
+  
+<footer>
+  <div class="container small">
+    © <span id="y"></span> Matilde Perotti • Last updated <span id="d"></span>
+  </div>
+</footer>
+<script>
+  const d = new Date();
+  document.getElementById('y').textContent = d.getFullYear();
+  document.getElementById('d').textContent = d.toLocaleDateString();
+</script>
+
+</body>
+</html>
