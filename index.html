@@ -4,16 +4,54 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About — Matilde Perotti</title>
-  <meta name="description" content="Matilde Perotti — About">
+  <meta name="description" content="Matilde Perotti — About" />
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- Minimal layout CSS to place image next to text -->
+  <style>
+    .hero {
+      display: flex;
+      align-items: flex-start;
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 1.5rem 1rem;
+    }
+    .hero .avatar {
+      width: 190px;
+      max-width: 40vw;
+      border-radius: 10px;
+      flex: 0 0 auto;
+    }
+    .hero .content {
+      flex: 1 1 auto;
+    }
+    .subtitle {
+      margin-top: 0.25rem;
+      color: #555;
+      line-height: 1.4;
+    }
+    @media (max-width: 720px) {
+      .hero {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .hero .content {
+        text-align: left; /* keeps paragraphs easy to read */
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
-  
 <header>
   <nav class="nav" aria-label="Primary">
-    <div class="brand"><a href="index.html" style="text-decoration:none;color:inherit">Matilde Perotti</a></div>
+    <div class="brand">
+      <a href="index.html" style="text-decoration:none;color:inherit">Matilde Perotti</a>
+    </div>
     <div class="tabs">
-      <a href="index.html">About</a>
+      <a href="index.html" aria-current="page">About</a>
       <a href="publications.html">Publications</a>
       <a href="research.html">Research</a>
       <a href="teaching.html">Teaching</a>
@@ -23,35 +61,44 @@
   </nav>
 </header>
 
-  <main class="container">
-    
-<section id="about" class="hero" aria-labelledby="about-title">
-<img class="avatar" src="images/matilde-perotti.jpg" alt="Portrait of Matilde Perotti" />
- <div>
-    <h1 id="about-title">Matilde Perotti</h1>
-    <p class="subtitle">PhD Student<br/>Department of Social and Political Sciences, Bocconi University</p>
+<main class="container">
+  <section id="about" class="hero" aria-labelledby="about-title">
+    <img class="avatar" src="images/matilde-perotti.jpg" alt="Portrait of Matilde Perotti" />
+    <div class="content">
+      <h1 id="about-title">Matilde Perotti</h1>
+      <p class="subtitle">
+        PhD Student<br />
+        Department of Social and Political Sciences, Bocconi University
+      </p>
 
-    <p>
-      Hi, and thanks for visiting my webpage! I am a PhD student in the Department of Social and Political Sciences at Bocconi University. My scholarship is funded by <strong>FOSSR – Fostering Open Science in Social Science Research</strong>, a project supported by the Italian <strong>National Recovery and Resilience Plan (PNRR) – NextGenerationEU</strong> under Grant Agreement <strong>MUR IR0000008</strong> (<a href="https://www.fossr.eu/" target="_blank">fossr.eu</a>). As part of FOSSR, I work within the Italian team of the <strong>Generations and Gender Survey</strong>, contributing to the implementation of the Italian wave currently in progress.
-    </p>
-    <p>
-I study how young people’s social environments and educational experiences shape their transition to adulthood across Europe. My research also examines how border enforcement practices and migration policies emerge and operate in Europe’s peripheries, drawing on fieldwork and collaborations with grassroots NGOs. Across both areas, I combine comparative and mixed-method approaches to understand how institutions, policies, and lived experiences intersect in shaping social inequality and mobility.    </p>
-  </div>
-</section>
+      <p>
+        Hi, and thanks for visiting my webpage! I am a PhD student in the Department of Social and Political Sciences at Bocconi University. My scholarship is funded by
+        <strong>FOSSR – Fostering Open Science in Social Science Research</strong>, a project supported by the Italian
+        <strong>National Recovery and Resilience Plan (PNRR) – NextGenerationEU</strong> under Grant Agreement
+        <strong>MUR IR0000008</strong> (<a href="https://www.fossr.eu/" target="_blank" rel="noopener noreferrer">fossr.eu</a>).
+        As part of FOSSR, I work within the Italian team of the <strong>Generations and Gender Survey</strong>, contributing to the implementation of the Italian wave currently in progress.
+      </p>
 
+      <p>
+        I study how young people’s social environments and educational experiences shape their transition to adulthood across Europe.
+        My research also examines how border enforcement practices and migration policies emerge and operate in Europe’s peripheries,
+        drawing on fieldwork and collaborations with grassroots NGOs. Across both areas, I combine comparative and mixed-method approaches
+        to understand how institutions, policies, and lived experiences intersect in shaping social inequality and mobility.
+      </p>
+    </div>
+  </section>
+</main>
 
-  </main>
-  
 <footer>
   <div class="container small">
     © <span id="y"></span> Matilde Perotti • Last updated <span id="d"></span>
   </div>
 </footer>
+
 <script>
   const d = new Date();
   document.getElementById('y').textContent = d.getFullYear();
   document.getElementById('d').textContent = d.toLocaleDateString();
 </script>
-
 </body>
 </html>
