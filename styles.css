@@ -28,19 +28,21 @@ section:first-of-type{border-top:none}
 .pill{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;border:1px solid var(--line);font-size:14px;color:var(--muted)}
 .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
 .chip{background:var(--chip);padding:6px 10px;border-radius:999px;font-size:14px;border:1px solid #e0e7ff}
+tify-self: center;   /* centers horizontally within the grid cell */
 .hero {
   display: grid;
   grid-template-columns: 170px 1fr;
   gap: 24px;
   align-items: center;
-  justify-items: center; /* centers image horizontally */
   padding: 26px 0;
 }
-/* Center the photo inside the left column of the hero grid */
-.hero .avatar {
-  justify-self: center;   /* centers horizontally within the grid cell */
+.avatar {
+  width: 170px;
+  height: 170px;
+  border-radius: 14px;
+  object-fit: cover;
+  border: 1px solid var(--line);
 }
-.avatar{width:170px;height:170px;border-radius:14px;object-fit:cover;border:1px solid var(--line)}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
 .columns{display:grid;grid-template-columns:1.2fr .8fr;gap:22px}
 @media (max-width:900px){.grid2,.columns{grid-template-columns:1fr} .hero{grid-template-columns:1fr} .avatar{width:120px;height:120px}}
