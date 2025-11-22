@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://matildeperotti.github.io/sitemap.xml
