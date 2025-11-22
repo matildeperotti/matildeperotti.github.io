@@ -4,41 +4,63 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact — Matilde Perotti</title>
-  <meta name="description" content="Matilde Perotti — Contact">
+  <meta name="description" content="Matilde Perotti — Contact" />
   <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    main.container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      line-height: 1.6;
+    }
+    h1 {
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+    p {
+      margin-bottom: 0.8rem;
+    }
+    a.link {
+      color: #0044cc;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    a.link:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
+
 <body>
-  
 <header>
   <nav class="nav" aria-label="Primary">
     <div class="brand"><a href="index.html" style="text-decoration:none;color:inherit">Matilde Perotti</a></div>
     <div class="tabs">
       <a href="index.html">About</a>
-      <a href="publications.html">Publications</a>
       <a href="research.html">Research</a>
       <a href="teaching.html">Teaching</a>
       <a href="cv.html">CV</a>
-      <a href="contact.html">Contact</a>
+      <a href="contact.html" aria-current="page">Contact</a>
     </div>
   </nav>
 </header>
 
-  <main class="container">
-    
-<h1>Contact</h1>
-<div class="card">
-  <p><strong>Email:</strong> matilde.perotti@unibocconi.it</p>
-  <p><strong>Office:</strong> Department of Social and Political Sciences, Bocconi University</p>
-  <p><a class="pill" href="https://www.linkedin.com/in/matilde-perotti/" target="_blank">LinkedIn</a></p>
-</div>
+<main class="container">
+  <h1>Contact</h1>
 
-  </main>
-  
+  <p><strong>Email:</strong> matilde.perotti@phd.unibocconi.it</p>
+  <p><strong>Office:</strong> DONDENA Centre – Bocconi University,<br/>
+  Via Roentgen 1, 20136 Milan (Italy)</p>
+  <p><a class="link" href="https://www.linkedin.com/in/matilde-perotti-19a0b41a7/" target="_blank" rel="noopener">LinkedIn</a></p>
+</main>
+
 <footer>
   <div class="container small">
     © <span id="y"></span> Matilde Perotti • Last updated <span id="d"></span>
   </div>
 </footer>
+
 <script>
   const d = new Date();
   document.getElementById('y').textContent = d.getFullYear();
