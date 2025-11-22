@@ -1,0 +1,37 @@
+
+:root{
+  --bg:#ffffff; --text:#1f2937; --muted:#4b5563; --accent:#2563eb;
+  --card:#f8fafc; --line:#e5e7eb; --chip:#eef2ff; --max:1100px; --radius:16px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;line-height:1.6}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%;display:block}
+header{border-bottom:1px solid var(--line);background:linear-gradient(180deg,#fff,#fafafa)}
+.nav{max-width:var(--max);margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px;gap:12px}
+.brand{font-weight:700;letter-spacing:.2px}
+.tabs{display:flex;gap:14px;flex-wrap:wrap}
+.tabs a{padding:8px 10px;border-radius:10px;color:var(--muted)}
+.tabs a:hover{background:#f3f4f6;color:var(--text)}
+.container{max-width:var(--max);margin:0 auto;padding:28px 20px}
+h1{font-size:clamp(28px,4vw,40px);line-height:1.2;margin:0}
+h2{font-size:clamp(22px,3vw,28px);margin:4px 0 8px}
+section{padding:18px 0;border-top:1px solid var(--line)}
+section:first-of-type{border-top:none}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px}
+.list{display:grid;gap:12px}
+.pub{display:grid;gap:4px}
+.pub .title{font-weight:600}
+.pub .meta{color:var(--muted);font-size:14px}
+.pill{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;border:1px solid var(--line);font-size:14px;color:var(--muted)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.chip{background:var(--chip);padding:6px 10px;border-radius:999px;font-size:14px;border:1px solid #e0e7ff}
+.hero{display:grid;grid-template-columns:170px 1fr;gap:24px;align-items:center;padding:26px 0}
+.avatar{width:170px;height:170px;border-radius:14px;object-fit:cover;border:1px solid var(--line)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.columns{display:grid;grid-template-columns:1.2fr .8fr;gap:22px}
+@media (max-width:900px){.grid2,.columns{grid-template-columns:1fr} .hero{grid-template-columns:1fr} .avatar{width:120px;height:120px}}
+footer{border-top:1px solid var(--line);padding:26px 20px;color:var(--muted)}
+.small{color:var(--muted);font-size:14px}
