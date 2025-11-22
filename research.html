@@ -6,16 +6,45 @@
   <title>Research — Matilde Perotti</title>
   <meta name="description" content="Matilde Perotti — Research">
   <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    main.container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      font-weight: 600;
+    }
+    h1 {
+      margin-bottom: 1.5rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.3rem;
+    }
+    .pub, li {
+      margin-bottom: 1rem;
+    }
+    .title {
+      font-weight: 500;
+    }
+    .meta {
+      font-size: 0.95rem;
+      color: #555;
+    }
+  </style>
 </head>
+
 <body>
-  
 <header>
   <nav class="nav" aria-label="Primary">
     <div class="brand"><a href="index.html" style="text-decoration:none;color:inherit">Matilde Perotti</a></div>
     <div class="tabs">
       <a href="index.html">About</a>
-      <a href="publications.html">Publications</a>
-      <a href="research.html">Research</a>
+      <a href="research.html" aria-current="page">Research</a>
       <a href="teaching.html">Teaching</a>
       <a href="cv.html">CV</a>
       <a href="contact.html">Contact</a>
@@ -23,41 +52,45 @@
   </nav>
 </header>
 
-  <main class="container">
-    
-<h1>Research</h1>
-<div class="columns">
-  <div class="card">
-    <h3 style="margin-top:0">Working Papers</h3>
-    <div class="list">
-      <div class="pub">
-        <div class="title">When Borders Kill: Pushbacks, Deterrence, and Migrant Mortality along the Balkan Route</div>
-        <div class="meta">Working paper — <a href="#">PDF</a> · <a href="#">Slides</a></div>
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <h3 style="margin-top:0">Work in Progress</h3>
-    <ul>
-      <li><em>Interethnic Contact and Cultural Openness among Youth in Lombardy</em></li>
-      <li><em>Reassessing Sex and Gender Measurement in European Survey Infrastructures</em> (with Maria Errico)</li>
-      <li><em>Conservative Gender Attitudes and Singlehood Among European Men</em> (with Letizia Mencarini and Elena Bastianelli)</li>
-    </ul>
-  </div>
-</div>
+<main class="container">
 
-  </main>
-  
+  <h1>Research</h1>
+
+  <h2>Publications</h2>
+  <div class="pub">
+    <div class="title">GGS: Generations and Gender Survey in Longitudinal Data Infrastructures in Europe</div>
+    <div class="meta">Book chapter — forthcoming at Springer, 2026 — with Letizia Mencarini, Nicolò Cavalli, Elena Marseglia, Ilaria Primerano, Michele Santurro, Nicolò Marchesini</div>
+  </div>
+
+  <h2>Working Papers</h2>
+  <div class="pub">
+    <div class="title">When Borders Kill: Pushbacks, Deterrence, and Migrant Mortality along the Balkan Route</div>
+    <div class="meta">Working paper — <a href="#">PDF</a> · <a href="#">Slides</a></div>
+  </div>
+
+  <h2>Work in Progress</h2>
+  <ul>
+    <li><em>Interethnic Contact and Cultural Openness among Youth in Lombardy</em></li>
+    <li><em>Reassessing Sex and Gender Measurement in European Survey Infrastructures</em> (with Maria Errico)</li>
+    <li><em>Conservative Gender Attitudes and Singlehood Among European Men</em> (with Letizia Mencarini and Elena Bastianelli)</li>
+  </ul>
+
+</main>
+
 <footer>
   <div class="container small">
     © <span id="y"></span> Matilde Perotti • Last updated <span id="d"></span>
   </div>
 </footer>
+
 <script>
   const d = new Date();
   document.getElementById('y').textContent = d.getFullYear();
   document.getElementById('d').textContent = d.toLocaleDateString();
 </script>
+
+</body>
+</html>
 
 </body>
 </html>
