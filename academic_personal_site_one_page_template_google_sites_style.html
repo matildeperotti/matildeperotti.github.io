@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name — Academic Website</title>
+  <meta name="description" content="Academic website for Your Name: research, publications, teaching, CV, and contact." />
+  <style>
+    :root{
+      --bg:#ffffff; --text:#1f2937; --muted:#4b5563; --accent:#2563eb; --accent2:#0ea5e9;
+      --card:#f8fafc; --line:#e5e7eb; --chip:#eef2ff;
+      --max:1100px; --radius:16px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;line-height:1.6}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    img{max-width:100%;display:block}
+    header{border-bottom:1px solid var(--line);background:linear-gradient(180deg,#fff, #fafafa)}
+    .nav{max-width:var(--max);margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px;gap:12px}
+    .brand{font-weight:700;letter-spacing:.2px}
+    .tabs{display:flex;gap:14px;flex-wrap:wrap}
+    .tabs a{padding:8px 10px;border-radius:10px;color:var(--muted)}
+    .tabs a:hover{background:#f3f4f6;color:var(--text)}
+    .container{max-width:var(--max);margin:0 auto;padding:28px 20px}
+    .hero{display:grid;grid-template-columns:170px 1fr;gap:24px;align-items:center;padding:26px 0}
+    .avatar{width:170px;height:170px;border-radius:14px;object-fit:cover;border:1px solid var(--line)}
+    h1{font-size:clamp(28px,4vw,40px);line-height:1.2;margin:0}
+    .subtitle{color:var(--muted);margin-top:6px}
+    .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+    .chip{background:var(--chip);padding:6px 10px;border-radius:999px;font-size:14px;border:1px solid #e0e7ff}
+    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    @media (max-width:800px){.hero{grid-template-columns:1fr}.grid2{grid-template-columns:1fr}.avatar{width:120px;height:120px;margin-bottom:6px}}
+    section{padding:18px 0;border-top:1px solid var(--line)}
+    section:first-of-type{border-top:none}
+    h2{font-size:clamp(22px,3vw,28px);margin:4px 0 8px}
+    p{margin:8px 0}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px}
+    .list{display:grid;gap:12px}
+    .pub{display:grid;gap:4px}
+    .pub .title{font-weight:600}
+    .pub .meta{color:var(--muted);font-size:14px}
+    .pill{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;border:1px solid var(--line);font-size:14px;color:var(--muted)}
+    .btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:white;border-radius:10px;padding:10px 12px;font-weight:600;border:none}
+    .btn:hover{filter:brightness(.95);text-decoration:none}
+    .btn.secondary{background:#111827}
+    footer{border-top:1px solid var(--line);padding:26px 20px;color:var(--muted)}
+    .kbd{font:12px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;background:#f3f4f6;border:1px solid var(--line);border-radius:6px;padding:2px 6px}
+    .columns{display:grid;grid-template-columns:1.2fr .8fr;gap:22px}
+    @media (max-width:900px){.columns{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <!-- Top nav -->
+  <header>
+    <nav class="nav" aria-label="Primary">
+      <div class="brand">Your Name</div>
+      <div class="tabs">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#cv">CV</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Hero -->
+    <section id="about" class="hero" aria-labelledby="about-title">
+      <img class="avatar" src="https://picsum.photos/400?grayscale" alt="Portrait of Your Name" />
+      <div>
+        <h1 id="about-title">Your Name</h1>
+        <p class="subtitle">Post‑doctoral Researcher, University / Institute<br/>Department / Center</p>
+        <div class="chips" aria-label="Research areas">
+          <span class="chip">Political Economy</span>
+          <span class="chip">Migration</span>
+          <span class="chip">Public Policy</span>
+        </div>
+        <p>
+          I am a researcher focusing on <strong>interethnic contact</strong>, <strong>public attitudes</strong>, and <strong>institutional change</strong>. My work combines survey data, administrative sources, and field experiments. 
+        </p>
+        <p>
+          In 2025–26 I am at <em>Institution / Host</em>. I received my PhD from <em>University</em> in 2025.
+        </p>
+      </div>
+    </section>
+
+    <!-- Research & News -->
+    <section id="research" aria-labelledby="research-title">
+      <h2 id="research-title">Research</h2>
+      <div class="columns">
+        <div class="card">
+          <h3 style="margin-top:0">Working papers</h3>
+          <div class="list">
+            <div class="pub">
+              <div class="title">Populism, Information, and Perceived Trade‑offs</div>
+              <div class="meta">with Coauthor A & Coauthor B — 2025 — <a href="#">PDF</a> · <a href="#">Slides</a>
+              </div>
+              <p>We model how biased message decoding shapes support for redistribution; validated with survey experiments.</p>
+            </div>
+            <div class="pub">
+              <div class="title">Schengen Accession and Border Pushbacks</div>
+              <div class="meta">Solo — 2024 — <a href="#">Draft</a> · <a href="#">OSF</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0">Current projects</h3>
+          <ul>
+            <li>Interethnic Contact and Cultural Openness among Youth in Lombardy.</li>
+            <li>Health Inequalities and Migration Trajectories.</li>
+            <li>Public Good Valuation in Secondary Education.</li>
+          </ul>
+          <p><a class="btn" href="#contact">Discuss a project</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Publications -->
+    <section id="publications" aria-labelledby="pubs-title">
+      <h2 id="pubs-title">Publications & Selected Writing</h2>
+      <div class="card">
+        <div class="list">
+          <div class="pub">
+            <div class="title">Title of Journal Article</div>
+            <div class="meta"><em>Journal Name</em>, 2025 — <a href="#">Publisher</a> · <a href="#">Ungated PDF</a></div>
+          </div>
+          <div class="pub">
+            <div class="title">Policy Brief: Measuring Border Violence</div>
+            <div class="meta">Think Tank, 2024 — <a href="#">PDF</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Teaching -->
+    <section id="teaching" aria-labelledby="teach-title">
+      <h2 id="teach-title">Teaching</h2>
+      <div class="grid2">
+        <div class="card">
+          <h3 style="margin-top:0">Instructor / TA</h3>
+          <ul>
+            <li>Introduction to Economics (Spring 2025) — TA — course rating 4.6/5</li>
+            <li>Advanced Microeconomics (Fall 2024) — TA</li>
+            <li>Demography (Spring 2024) — Lecturer (HS outreach)</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0">Syllabi & Materials</h3>
+          <p>
+            <a class="pill" href="#">Syllabus — Intro to Econ</a>
+            <a class="pill" href="#">Problem Sets</a>
+            <a class="pill" href="#">Office Hours</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CV -->
+    <section id="cv" aria-labelledby="cv-title">
+      <h2 id="cv-title">CV</h2>
+      <div class="card">
+        <p>Download a full CV as PDF or browse a short bio below.</p>
+        <p>
+          <a class="btn" href="#">CV (PDF)</a>
+          <a class="btn secondary" href="#about">Short Bio</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact</h2>
+      <div class="grid2">
+        <div class="card">
+          <p><strong>Email:</strong> your.name@university.edu</p>
+          <p><strong>Office:</strong> Building, Room — City, Country</p>
+          <p>
+            <a class="pill" href="#">Google Scholar</a>
+            <a class="pill" href="#">ORCID</a>
+            <a class="pill" href="#">Twitter / X</a>
+            <a class="pill" href="#">LinkedIn</a>
+          </p>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0">For students</h3>
+          <p>Prospective students and RAs: send a short paragraph about your interests and a CV.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div>© <span id="y"></span> Your Name • Last updated <span id="d"></span></div>
+    </div>
+  </footer>
+
+  <script>
+    // auto-update footer date
+    const d = new Date();
+    document.getElementById('y').textContent = d.getFullYear();
+    document.getElementById('d').textContent = d.toLocaleDateString();
+  </script>
+</body>
+</html>
