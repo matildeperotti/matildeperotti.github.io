@@ -3,254 +3,59 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Matilde Perotti</title>
-  <meta name="description" content="Matilde Perotti: About, Research, Teaching, CV, Contact." />
-  <style>
-    :root{
-      --bg:#ffffff; --text:#1f2937; --muted:#4b5563; --accent:#2563eb; --accent2:#0ea5e9;
-      --card:#f8fafc; --line:#e5e7eb; --chip:#eef2ff;
-      --max:1100px; --radius:16px;
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;line-height:1.6}
-    a{color:var(--accent);text-decoration:none}
-    a:hover{text-decoration:underline}
-    img{max-width:100%;display:block}
-    header{border-bottom:1px solid var(--line);background:linear-gradient(180deg,#fff, #fafafa)}
-    .nav{max-width:var(--max);margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px;gap:12px}
-    .brand{font-weight:700;letter-spacing:.2px}
-    .tabs{display:flex;gap:14px;flex-wrap:wrap}
-    .tabs a{padding:8px 10px;border-radius:10px;color:var(--muted)}
-    .tabs a:hover{background:#f3f4f6;color:var(--text)}
-    .container{max-width:var(--max);margin:0 auto;padding:28px 20px}
-    .hero{display:grid;grid-template-columns:170px 1fr;gap:24px;align-items:center;padding:26px 0}
-    .avatar{width:170px;height:170px;border-radius:14px;object-fit:cover;border:1px solid var(--line)}
-    h1{font-size:clamp(28px,4vw,40px);line-height:1.2;margin:0}
-    .subtitle{color:var(--muted);margin-top:6px}
-    .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
-    .chip{background:var(--chip);padding:6px 10px;border-radius:999px;font-size:14px;border:1px solid #e0e7ff}
-    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-    @media (max-width:800px){.hero{grid-template-columns:1fr}.grid2{grid-template-columns:1fr}.avatar{width:120px;height:120px;margin-bottom:6px}}
-    section{padding:18px 0;border-top:1px solid var(--line)}
-    section:first-of-type{border-top:none}
-    h2{font-size:clamp(22px,3vw,28px);margin:4px 0 8px}
-    p{margin:8px 0}
-    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px}
-    .list{display:grid;gap:12px}
-    .pub{display:grid;gap:4px}
-    .pub .title{font-weight:600}
-    .pub .meta{color:var(--muted);font-size:14px}
-    .pill{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;border:1px solid var(--line);font-size:14px;color:var(--muted)}
-    .btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:white;border-radius:10px;padding:10px 12px;font-weight:600;border:none}
-    .btn:hover{filter:brightness(.95);text-decoration:none}
-    .btn.secondary{background:#111827}
-    footer{border-top:1px solid var(--line);padding:26px 20px;color:var(--muted)}
-    .kbd{font:12px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;background:#f3f4f6;border:1px solid var(--line);border-radius:6px;padding:2px 6px}
-    .columns{display:grid;grid-template-columns:1.2fr .8fr;gap:22px}
-    @media (max-width:900px){.columns{grid-template-columns:1fr}}
-  </style>
+  <title>About — Matilde Perotti</title>
+  <meta name="description" content="Matilde Perotti — About">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Top nav -->
-  <header>
-    <nav class="nav" aria-label="Primary">
-      <div class="brand">Matilde Perotti</div>
-      <div class="tabs">
-        <a href="#about">About</a>
-        <a href="#publications">Publications</a>
-        <a href="#research">Research</a>
-        <a href="#teaching">Teaching</a>
-        <a href="#cv">CV</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
-  </header>
+  
+<header>
+  <nav class="nav" aria-label="Primary">
+    <div class="brand"><a href="index.html" style="text-decoration:none;color:inherit">Matilde Perotti</a></div>
+    <div class="tabs">
+      <a href="index.html">About</a>
+      <a href="publications.html">Publications</a>
+      <a href="research.html">Research</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="cv.html">CV</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
 
   <main class="container">
-    <!-- Hero -->
-    <section id="about" class="hero" aria-labelledby="about-title">
-      <img class="avatar" src="https://picsum.photos/400?grayscale" alt="Portrait of Matilde Perotti" />
-      <div>
-        <h1 id="about-title">Matilde Perotti</h1>
-        <p class="subtitle">PhD Student<br/>Department of Social and Political Sciences, Bocconi University</p>
-        <div class="chips" aria-label="Research areas">
-          <span class="chip">Migration Studies</span>
-          <span class="chip">Life Course</span>
-          <span class="chip">Public Policy</span>
-        </div>
-        <p>
-          Hi, and thanks for visiting my webpage! I am a PhD student in the Department of Social and Political Sciences at Bocconi University. My scholarship is funded by <strong>FOSSR – Fostering Open Science in Social Science Research</strong>, a project supported by the Italian <strong>National Recovery and Resilience Plan (PNRR) – NextGenerationEU</strong> under Grant Agreement <strong>MUR IR0000008</strong> (<a href="https://www.fossr.eu/" target="_blank">fossr.eu</a>). As part of FOSSR, I work within the Italian team of the <strong>Generations and Gender Survey</strong>, contributing to the implementation of the Italian wave currently in progress.
-        </p>
-        <p>
-          My research focuses on two main areas. First, I study the life course of young adults across Europe, analyzing how school experiences and social environments shape their transition to adulthood. Second, drawing on my experience with grassroots NGOs, I investigate border enforcement practices and migration policies in Europe.
-        </p>
-      </div>
-    </section>
-
-    <!-- Publications -->
-    <section id="publications" aria-labelledby="pubs-title">
-      <h2 id="pubs-title">Publications</h2>
-
-      <div class="card">
-        <h3 style="margin-top:0">Book Chapter</h3>
-        <div class="list">
-          <div class="pub">
-            <div class="title">GGS: Generations and Gender Survey in Longitudinal Data Infrastructures in Europe</div>
-            <div class="meta">
-              Book chapter — forthcoming at Springer, 2026 — with Letizia Mencarini, Nicolò Cavalli,
-              Elena Marseglia, Ilaria Primerano, Michele Santurro, Nicolò Marchesini
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Research -->
-    <section id="research" aria-labelledby="research-title">
-      <h2 id="research-title">Research</h2>
-
-      <div class="columns">
-        <!-- Left: Working Papers -->
-        <div class="card">
-          <h3 style="margin-top:0">Working Papers</h3>
-          <div class="list">
-            <div class="pub">
-              <div class="title">When Borders Kill: Pushbacks, Deterrence, and Migrant Mortality along the Balkan Route</div>
-              <div class="meta">Working paper — <a href="#">PDF</a> · <a href="#">Slides</a></div>
-              <!-- <p class="muted">Optional one-line description here.</p> -->
-            </div>
-          </div>
-        </div>
-
-        <!-- Right: Work in Progress -->
-        <div class="card">
-          <h3 style="margin-top:0">Work in Progress</h3>
-          <ul>
-            <li><em>Interethnic Contact and Cultural Openness among Youth in Lombardy</em></li>
-            <li><em>Reassessing Sex and Gender Measurement in European Survey Infrastructures</em> (with Maria Errico)</li>
-            <li><em>Conservative Gender Attitudes and Singlehood Among European Men</em> (with Letizia Mencarini and Elena Bastianelli)</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Teaching -->
-    <section id="teaching" aria-labelledby="teach-title">
-      <h2 id="teach-title">Teaching</h2>
-
-      <p>All listed courses are part of the undergraduate and graduate programs at <strong>Bocconi University</strong>.</p>
-
-      <div class="grid2">
-        <!-- 2025/2026 -->
-        <div class="card">
-          <h3 style="margin-top:0">Courses a.y. 2025/2026</h3>
-          <ul>
-            <li>
-              <strong>20609 — Public Administration</strong><br/>
-              <em>Role:</em> Teaching Assistant (Profs. Rebecca Kirley and Barbara Zyzak)<br/>
-              <em>Activities:</em> Proctoring; support with course materials and assessments; group work assistance; hosted one lecture: <em>“Understanding Institutional and Racial Discrimination through a Critical Institutional Lens.”</em>
-            </li>
-            <li>
-              <strong>20613 — Political Science – Module 2 (International Relations and Politics)</strong><br/>
-              <em>Role:</em> Teaching Assistant (Prof. Kerim Can Kavakli)<br/>
-              <em>Activities:</em> Proctoring; support with course materials and assessments; hosted one lecture: <em>“Migration as a Coercive Tool.”</em>
-            </li>
-            <li>
-              <strong>20888 — Foundations of Social Sciences – Module II A (Institutions, Government and Society)</strong><br/>
-              <em>Role:</em> Teaching Assistant (Prof. Marlene Jugl)<br/>
-              <em>Activities:</em> Proctoring; support with course materials and assessments.
-            </li>
-            <li>
-              <strong>30282 — Globalization, Societies and Institutions</strong><br/>
-              <em>Role:</em> Teaching Assistant (Prof. Luciano Renato Segreto)<br/>
-              <em>Activities:</em> Proctoring; support with course materials and assessments.
-            </li>
-            <li>
-              <strong>30341 — Management of Government Organizations</strong><br/>
-              <em>Role:</em> Teaching Assistant (Profs. Amelia Compagni and Giorgio Giacomelli)<br/>
-              <em>Activities:</em> Proctoring; support with course materials and assessments; group work supervision.
-            </li>
-            <li>
-              <strong>30528 — Sociology</strong><br/>
-              <em>Role:</em> Teaching Assistant (Prof. Nicoletta Balbo)<br/>
-              <em>Activities:</em> Proctoring; supervision of group projects (podcast production and evaluation).
-            </li>
-          </ul>
-        </div>
-
-        <!-- 2024/2025 -->
-        <div class="card">
-          <h3 style="margin-top:0">Courses a.y. 2024/2025</h3>
-          <ul>
-            <li>
-              <strong>20609 — Public Administration</strong><br/>
-              <em>Role:</em> Teaching Assistant (Prof. Marlene Jugl)<br/>
-              <em>Activities:</em> Proctoring; exam grading.
-            </li>
-            <li>
-              <strong>20888 — Foundations of Social Sciences – Module II A (Institutions, Government and Society)</strong><br/>
-              <em>Role:</em> Teaching Assistant (Profs. Michele Bee and Alessandro Sancino)<br/>
-              <em>Activities:</em> Proctoring; support with course materials and assessments.
-            </li>
-            <li>
-              <strong>30341 — Management of Government Organizations</strong><br/>
-              <em>Role:</em> Teaching Assistant (Profs. Amelia Compagni, Giorgio Giacomelli, Gianmaria Mallarino)<br/>
-              <em>Activities:</em> Proctoring; support with course materials and assessments; group work supervision.
-            </li>
-            <li>
-              <strong>30528 — Sociology</strong><br/>
-              <em>Role:</em> Teaching Assistant (Prof. Nicoletta Balbo)<br/>
-              <em>Activities:</em> Proctoring; supervision of group projects (podcast production and evaluation).
-            </li>
-            <li>
-              <strong>30198 — Storia dell’Impresa Italiana</strong><br/>
-              <em>Role:</em> Teaching Assistant (Profs. Luciano Renato Segreto and Andrea Colli)<br/>
-              <em>Activities:</em> Proctoring; support with course materials and assessments.
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- CV -->
-    <section id="cv" aria-labelledby="cv-title">
-      <h2 id="cv-title">Curriculum Vitae</h2>
-      <div class="card">
-        <p>
-          You can download my full CV below. A brief academic bio and current projects are also listed on this page.
-        </p>
-        <p>
-          <a class="btn" href="cv_matilde_perotti.pdf" target="_blank">Download CV (PDF)</a>
-        </p>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" aria-labelledby="contact-title">
-      <h2 id="contact-title">Contact</h2>
-      <div class="card">
-        <p><strong>Email:</strong> matilde.perotti@unibocconi.it</p>
-        <p><strong>Office:</strong> Department of Social and Political Sciences, Bocconi University</p>
-        <p>
-          <a class="pill" href="https://www.linkedin.com/in/matilde-perotti/" target="_blank">LinkedIn</a>
-        </p>
-      </div>
-    </section>
+    
+<section id="about" class="hero" aria-labelledby="about-title">
+  <img class="avatar" src="https://picsum.photos/400?grayscale" alt="Portrait of Matilde Perotti" />
+  <div>
+    <h1 id="about-title">Matilde Perotti</h1>
+    <p class="subtitle">PhD Student<br/>Department of Social and Political Sciences, Bocconi University</p>
+    <div class="chips" aria-label="Research areas">
+      <span class="chip">Migration Studies</span>
+      <span class="chip">Life Course</span>
+      <span class="chip">Public Policy</span>
+    </div>
+    <p>
+      Hi, and thanks for visiting my webpage! I am a PhD student in the Department of Social and Political Sciences at Bocconi University. My scholarship is funded by <strong>FOSSR – Fostering Open Science in Social Science Research</strong>, a project supported by the Italian <strong>National Recovery and Resilience Plan (PNRR) – NextGenerationEU</strong> under Grant Agreement <strong>MUR IR0000008</strong> (<a href="https://www.fossr.eu/" target="_blank">fossr.eu</a>). As part of FOSSR, I work within the Italian team of the <strong>Generations and Gender Survey</strong>, contributing to the implementation of the Italian wave currently in progress.
+    </p>
+    <p>
+      My research focuses on two main areas. First, I study the life course of young adults across Europe, analyzing how school experiences and social environments shape their transition to adulthood. Second, drawing on my experience with grassroots NGOs, I investigate border enforcement practices and migration policies in Europe.
+    </p>
+  </div>
+</section>
 
   </main>
+  
+<footer>
+  <div class="container small">
+    © <span id="y"></span> Matilde Perotti • Last updated <span id="d"></span>
+  </div>
+</footer>
+<script>
+  const d = new Date();
+  document.getElementById('y').textContent = d.getFullYear();
+  document.getElementById('d').textContent = d.toLocaleDateString();
+</script>
 
-  <footer>
-    <div class="container">
-      <div>© <span id="y"></span> Matilde Perotti • Last updated <span id="d"></span></div>
-    </div>
-  </footer>
-
-  <script>
-    // auto-update footer date
-    const d = new Date();
-    document.getElementById('y').textContent = d.getFullYear();
-    document.getElementById('d').textContent = d.toLocaleDateString();
-  </script>
 </body>
 </html>
-
