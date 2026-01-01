@@ -4,36 +4,162 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Research — Matilde Perotti</title>
-  <meta name="description" content="Matilde Perotti — Research">
+  <meta name="description" content="Matilde Perotti — Research" />
   <link rel="stylesheet" href="styles.css" />
 
   <style>
-    main.container {
-      max-width: 900px;
+    main.container{
+      max-width: 980px;
       margin: 0 auto;
-      padding: 2rem 1rem;
-      line-height: 1.6;
+      padding: 2.25rem 1rem;
+      line-height: 1.65;
     }
-    h1, h2 {
+
+    h1{
       font-weight: 600;
+      margin: 0 0 1.4rem 0;
+      letter-spacing: .2px;
     }
-    h1 {
-      margin-bottom: 1.5rem;
-    }
-    h2 {
-      margin-top: 2rem;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 0.3rem;
-    }
-    .pub, li {
-      margin-bottom: 1rem;
-    }
-    .title {
+
+    /* Section headings like Francesco */
+    h2{
       font-weight: 500;
+      font-size: 2.2rem;
+      margin: 2.6rem 0 1.2rem 0;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #e6e6e6;
+      letter-spacing: .2px;
     }
-    .meta {
-      font-size: 0.95rem;
-      color: #555;
+
+    /* Francesco-like publication rows */
+    .pub-row{
+      position: relative;
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 1.75rem;
+      padding: 1.35rem 0 1.35rem 0;
+      border-bottom: 1px solid #ededed;
+      align-items: start;
+    }
+
+    /* faint year on the right */
+    .pub-year{
+      position: absolute;
+      right: 0;
+      top: .7rem;
+      font-size: 3.2rem;
+      font-weight: 300;
+      color: #f0f0f0;
+      letter-spacing: 1px;
+      pointer-events: none;
+      user-select: none;
+      line-height: 1;
+    }
+
+    .cover{
+      width: 120px;
+      height: 160px;
+      border-radius: 6px;
+      background: #f3f3f3;
+      border: 1px solid #e7e7e7;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .cover img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    /* if you don't have a cover image, show a clean placeholder */
+    .cover.placeholder{
+      font-size: .9rem;
+      color: #777;
+      text-align: center;
+      padding: .75rem;
+    }
+
+    .pub-title{
+      font-weight: 600;
+      margin: 0 0 .35rem 0;
+    }
+
+    .pub-authors{
+      margin: 0 0 .35rem 0;
+      color: #333;
+    }
+
+    .pub-authors a{
+      color: #c07a00;          /* Francesco-like warm accent */
+      text-decoration: none;
+    }
+    .pub-authors a:hover{ text-decoration: underline; }
+
+    .pub-venue{
+      margin: 0 0 .8rem 0;
+      color: #111;
+    }
+    .pub-venue em{ font-style: italic; }
+
+    .btns{
+      display: flex;
+      gap: .8rem;
+      flex-wrap: wrap;
+      margin-top: .2rem;
+    }
+    .btn{
+      display: inline-block;
+      padding: .45rem .9rem;
+      border: 1px solid #111;
+      border-radius: 3px;
+      background: transparent;
+      color: #111;
+      font-size: .8rem;
+      letter-spacing: .6px;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+    .btn:hover{
+      background: #111;
+      color: #fff;
+    }
+
+    /* Working papers / WIP list like Francesco: clean spacing, buttons optional */
+    .wp-item{
+      padding: 1.1rem 0;
+      border-bottom: 1px solid #ededed;
+    }
+    .wp-title{
+      font-weight: 600;
+      margin: 0 0 .35rem 0;
+    }
+    .wp-authors{
+      margin: 0 0 .7rem 0;
+      color: #333;
+    }
+
+    ul.wip{
+      margin: 0;
+      padding-left: 1.2rem;
+    }
+    ul.wip li{
+      margin: .6rem 0;
+    }
+
+    @media (max-width: 760px){
+      .pub-row{
+        grid-template-columns: 1fr;
+      }
+      .cover{
+        width: 140px;
+        height: 180px;
+      }
+      .pub-year{
+        font-size: 2.4rem;
+        top: .9rem;
+      }
     }
   </style>
 </head>
@@ -41,7 +167,9 @@
 <body>
 <header>
   <nav class="nav" aria-label="Primary">
-    <div class="brand"><a href="index.html" style="text-decoration:none;color:inherit">Matilde Perotti</a></div>
+    <div class="brand">
+      <a href="index.html" style="text-decoration:none;color:inherit">Matilde Perotti</a>
+    </div>
     <div class="tabs">
       <a href="index.html">About</a>
       <a href="research.html" aria-current="page">Research</a>
@@ -56,23 +184,63 @@
 
   <h1>Research</h1>
 
+  <!-- PUBLICATIONS -->
   <h2>Publications</h2>
-  <div class="pub">
-    <div class="title">GGS: Generations and Gender Survey in Longitudinal Data Infrastructures in Europe</div>
-    <div class="meta">Book chapter — forthcoming at Springer, 2026 — with Letizia Mencarini, Nicolò Cavalli, Elena Marseglia, Ilaria Primerano, Michele Santurro, Nicolò Marchesini</div>
-  </div>
 
+  <!-- Publication 1 (with optional cover + faint year) -->
+  <article class="pub-row">
+    <div class="pub-year">2026</div>
+
+    <!-- OPTION A: if you have a cover image, replace the placeholder div with <img> -->
+    <!--
+    <div class="cover">
+      <img src="images/covers/ggs_springer.jpg" alt="Cover image for the publication" />
+    </div>
+    -->
+
+    <!-- OPTION B: placeholder cover (safe default) -->
+    <div class="cover placeholder">Cover<br/>image</div>
+
+    <div>
+      <p class="pub-title">GGS: Generations and Gender Survey in Longitudinal Data Infrastructures in Europe</p>
+      <p class="pub-authors">
+        Book chapter — forthcoming at Springer, 2026 — with
+        <a href="#" onclick="return false;">Letizia Mencarini</a>, <a href="#" onclick="return false;">Nicolò Cavalli</a>,
+        <a href="#" onclick="return false;">Elena Marseglia</a>, <a href="#" onclick="return false;">Ilaria Primerano</a>,
+        <a href="#" onclick="return false;">Michele Santurro</a>, <a href="#" onclick="return false;">Nicolò Marchesini</a>
+      </p>
+
+      <!-- Buttons optional: add real links when you have them -->
+      <div class="btns">
+        <!-- <a class="btn" href="abstracts/ggs.html">Abstract</a> -->
+        <!-- <a class="btn" href="papers/ggs.pdf">Paper</a> -->
+      </div>
+    </div>
+  </article>
+
+  <!-- WORKING PAPERS -->
   <h2>Working Papers</h2>
-  <div class="pub">
-    <div class="title">When Borders Kill: Pushbacks, Deterrence, and Migrant Mortality along the Balkan Route</div>
+
+  <div class="wp-item">
+    <p class="wp-title">When Borders Kill: Pushbacks, Deterrence, and Migrant Mortality along the Balkan Route</p>
+
+    <!-- Optional: coauthors line -->
+    <!-- <p class="wp-authors">with <a href="...">Coauthor Name</a></p> -->
+
+    <div class="btns">
+      <!-- add links if/when you have them -->
+      <a class="btn" href="#" onclick="return false;">Abstract</a>
+      <!-- <a class="btn" href="papers/when-borders-kill.pdf">Paper</a> -->
+    </div>
   </div>
 
-  <h2>Work in Progress</h2>
-  <ul>
+  <!-- WORKS IN PROGRESS -->
+  <h2>Works in Progress</h2>
+  <ul class="wip">
     <li><em>Interethnic Contact and Cultural Openness among Youth in Lombardy</em></li>
     <li><em>Reassessing Sex and Gender Measurement in European Survey Infrastructures</em> (with Maria Errico)</li>
     <li><em>Conservative Gender Attitudes and Singlehood Among European Men</em> (with Letizia Mencarini and Elena Bastianelli)</li>
-    <li><em> The Generations and Gender Survey Round II (GGS-II) in Italy.</em> (with Nicolò Cavalli, Nicolò Marchesini, Elena Marseglia, Letizia Mencarini, Ilaria Primerano, and Michele Santurro.)</li>
+    <li><em>The Generations and Gender Survey Round II (GGS-II) in Italy</em> (with Nicolò Cavalli, Nicolò Marchesini, Elena Marseglia, Letizia Mencarini, Ilaria Primerano, and Michele Santurro)</li>
   </ul>
 
 </main>
@@ -88,9 +256,6 @@
   document.getElementById('y').textContent = d.getFullYear();
   document.getElementById('d').textContent = d.toLocaleDateString();
 </script>
-
-</body>
-</html>
 
 </body>
 </html>
