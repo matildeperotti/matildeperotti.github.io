@@ -73,7 +73,6 @@
       object-fit: cover;
       display: block;
     }
-    /* if you don't have a cover image, show a clean placeholder */
     .cover.placeholder{
       font-size: .9rem;
       color: #777;
@@ -90,12 +89,6 @@
       margin: 0 0 .35rem 0;
       color: #333;
     }
-
-    .pub-authors a{
-      color: #c07a00;          /* Francesco-like warm accent */
-      text-decoration: none;
-    }
-    .pub-authors a:hover{ text-decoration: underline; }
 
     .pub-venue{
       margin: 0 0 .8rem 0;
@@ -120,13 +113,14 @@
       letter-spacing: .6px;
       text-transform: uppercase;
       text-decoration: none;
+      cursor: pointer;
     }
     .btn:hover{
       background: #111;
       color: #fff;
     }
 
-    /* Working papers / WIP list like Francesco: clean spacing, buttons optional */
+    /* Working papers */
     .wp-item{
       padding: 1.1rem 0;
       border-bottom: 1px solid #ededed;
@@ -140,12 +134,45 @@
       color: #333;
     }
 
+    /* Abstract box */
+    .wp-abstract{
+      margin-top: .75rem;
+      padding: .75rem .9rem;
+      border-left: 3px solid #c07a00;
+      background: #fafafa;
+      font-size: .95rem;
+      line-height: 1.6;
+    }
+
+    /* Works in progress list */
     ul.wip{
       margin: 0;
       padding-left: 1.2rem;
     }
     ul.wip li{
       margin: .6rem 0;
+    }
+
+    /* ====== Make ALL names orange ====== */
+    /* Links in publications, working papers, and WIP */
+    .pub-authors a,
+    .wp-authors a,
+    .wip a{
+      color: #c07a00;
+      text-decoration: none;
+    }
+    .pub-authors a:hover,
+    .wp-authors a:hover,
+    .wip a:hover{
+      text-decoration: underline;
+    }
+
+    /* Your non-link name in author lists (e.g., <strong>Matilde Perotti</strong>) */
+    .pub-authors strong,
+    .wp-authors strong,
+    .wip strong{
+      color: #c07a00;
+      font-weight: 600;
     }
 
     @media (max-width: 760px){
@@ -184,139 +211,129 @@
 
   <h1>Research</h1>
 
-<!-- PUBLICATIONS -->
-<h2>Publications</h2>
+  <!-- PUBLICATIONS -->
+  <h2>Publications</h2>
 
-<article class="pub-row">
-  <!-- faint year on the right -->
-  <div class="pub-year">2025</div>
+  <article class="pub-row">
+    <div class="pub-year">2025</div>
 
-  <!-- Cover image -->
-  <div class="cover">
-    <img
-      src="images/Longitudinal_Data_Infrastrucres_in_Europe.jpg"
-      alt="Cover of Longitudinal Data Infrastructures in Europe"
-    />
-  </div>
+    <div class="cover">
+      <img
+        src="images/Longitudinal_Data_Infrastrucres_in_Europe.jpg"
+        alt="Cover of Longitudinal Data Infrastructures in Europe"
+      />
+    </div>
 
-  <div>
-    <p class="pub-title">
-      GGS: Generations and Gender Survey
+    <div>
+      <p class="pub-title">
+        GGS: Generations and Gender Survey
+      </p>
+
+      <p class="pub-authors">
+        <a href="https://faculty.unibocconi.it/nicolocavalli/" target="_blank" rel="noopener noreferrer">Nicolò Cavalli</a>,
+        <a href="https://scholar.google.com/citations?user=5oqFx0EAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Nicolò Marchesini</a>,
+        <a href="https://faculty.unibocconi.it/elenamarseglia/" target="_blank" rel="noopener noreferrer">Elena Marseglia</a>,
+        <a href="https://sps.unibocconi.eu/faculty/letizia-mencarini" target="_blank" rel="noopener noreferrer">Letizia Mencarini</a>,
+        <strong>Matilde Perotti</strong>,
+        <a href="https://www.irpps.cnr.it/ilaria-primerano/" target="_blank" rel="noopener noreferrer">Ilaria Primerano</a>,
+        and
+        <a href="https://www.irpps.cnr.it/michele-santurro/" target="_blank" rel="noopener noreferrer">Michele Santurro</a>
+      </p>
+
+      <p class="pub-venue">
+        Chapter in <em>Longitudinal Data Infrastructures in Europe</em>,
+        Springer Nature, 2025, pp. 131–140
+      </p>
+
+      <div class="btns">
+        <a
+          class="btn"
+          href="https://link.springer.com/chapter/10.1007/978-3-032-07005-0_10"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Chapter
+        </a>
+        <a
+          class="btn"
+          href="https://link.springer.com/content/pdf/10.1007/978-3-032-07005-0_10.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Open Access
+        </a>
+      </div>
+    </div>
+  </article>
+
+  <!-- WORKING PAPERS -->
+  <h2>Working Papers</h2>
+
+  <div class="wp-item">
+    <p class="wp-title">
+      When Borders Kill: Pushbacks, Deterrence, and Migrant Mortality along the Balkan Route
     </p>
 
-    <p class="pub-authors">
+    <div class="btns">
+      <button class="btn" type="button" onclick="toggleAbstract('wp-abstract-1')">
+        Abstract
+      </button>
+    </div>
+
+    <div id="wp-abstract-1" class="wp-abstract" hidden>
+      <p>
+        <strong>Abstract.</strong>
+        This paper studies pushbacks—defined as illegal cross-border expulsions conducted by
+        border authorities—as a case of institutionalized deterrence along the Western Balkan Route.
+        I ask whether deterrence-oriented border policies increase the occurrence of migrant deaths.
+        Using a monthly region-level (NUTS-3) panel across twelve Eastern European countries from
+        2017 to 2024, I combine two-way fixed effects, Poisson, and counterfactual estimators to
+        identify the causal effect of pushbacks on migrant fatalities. The findings show that regions
+        experiencing pushbacks record an average increase of 0.10 deaths per month, with effects
+        concentrated in transport-related incidents rather than direct violence. I find no evidence
+        of spatial displacement toward neighboring regions. To test the robustness of these results,
+        I exploit Croatia’s 2023 Schengen accession as an exogenous policy shock, which coincided
+        with a decline in both pushbacks and deaths. Overall, the findings provide causal evidence
+        that deterrence-based border enforcement increases mortality among people on the move.
+      </p>
+    </div>
+  </div>
+
+  <!-- WORKS IN PROGRESS -->
+  <h2>Works in Progress</h2>
+  <ul class="wip">
+    <li>
+      <em>Interethnic Contact and Cultural Openness among Youth in Lombardy</em>
+      (with
+      <a href="https://faculty.unibocconi.it/carlodevillanova/" target="_blank" rel="noopener noreferrer">Carlo Devillanova</a>)
+    </li>
+
+    <li>
+      <em>Reassessing Sex and Gender Measurement in European Survey Infrastructures</em>
+      (with
+      <a href="https://faculty.unibocconi.it/mariaerrico/" target="_blank" rel="noopener noreferrer">Maria Errico</a>)
+    </li>
+
+    <li>
+      <em>Conservative Gender Attitudes and Singlehood Among European Men</em>
+      (with
+      <a href="https://sps.unibocconi.eu/faculty/letizia-mencarini" target="_blank" rel="noopener noreferrer">Letizia Mencarini</a>
+      and
+      <a href="https://dondena.unibocconi.eu/elena-bastianelli" target="_blank" rel="noopener noreferrer">Elena Bastianelli</a>)
+    </li>
+
+    <li>
+      <em>The Generations and Gender Survey Round II (GGS-II) in Italy</em>
+      (with
       <a href="https://faculty.unibocconi.it/nicolocavalli/" target="_blank" rel="noopener noreferrer">Nicolò Cavalli</a>,
       <a href="https://scholar.google.com/citations?user=5oqFx0EAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Nicolò Marchesini</a>,
       <a href="https://faculty.unibocconi.it/elenamarseglia/" target="_blank" rel="noopener noreferrer">Elena Marseglia</a>,
       <a href="https://sps.unibocconi.eu/faculty/letizia-mencarini" target="_blank" rel="noopener noreferrer">Letizia Mencarini</a>,
-      <strong>Matilde Perotti</strong>,
       <a href="https://www.irpps.cnr.it/ilaria-primerano/" target="_blank" rel="noopener noreferrer">Ilaria Primerano</a>,
       and
-      <a href="https://www.irpps.cnr.it/michele-santurro/" target="_blank" rel="noopener noreferrer">Michele Santurro</a>
-    </p>
-
-    <p class="pub-venue">
-      Chapter in <em>Longitudinal Data Infrastructures in Europe</em>,
-      Springer Nature, 2025, pp. 131–140
-    </p>
-
-    <div class="btns">
-      <a
-        class="btn"
-        href="https://link.springer.com/chapter/10.1007/978-3-032-07005-0_10"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Chapter
-      </a>
-      <a
-        class="btn"
-        href="https://link.springer.com/content/pdf/10.1007/978-3-032-07005-0_10.pdf"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Open Access
-      </a>
-    </div>
-  </div>
-</article>
-
-<!-- WORKING PAPERS -->
-<h2>Working Papers</h2>
-
-<div class="wp-item">
-
-  <p class="wp-title">
-    When Borders Kill: Pushbacks, Deterrence, and Migrant Mortality along the Balkan Route
-  </p>
-
-  <div class="btns">
-    <button class="btn" type="button" onclick="toggleAbstract('wp-abstract-1')">
-      Abstract
-    </button>
-    <!-- <a class="btn" href="papers/when-borders-kill.pdf">Paper</a> -->
-  </div>
-
-  <!-- Hidden abstract -->
-<div id="wp-abstract-1" class="wp-abstract" hidden>
-  <p>
-    <strong>Abstract.</strong>
-    This paper studies pushbacks—defined as illegal cross-border expulsions conducted by
-    border authorities—as a case of institutionalized deterrence along the Western Balkan Route.
-    I ask whether deterrence-oriented border policies increase the occurrence of migrant deaths.
-    Using a monthly region-level (NUTS-3) panel across twelve Eastern European countries from
-    2017 to 2024, I combine two-way fixed effects, Poisson, and counterfactual estimators to
-    identify the causal effect of pushbacks on migrant fatalities. The findings show that regions
-    experiencing pushbacks record an average increase of 0.10 deaths per month, with effects
-    concentrated in transport-related incidents rather than direct violence. I find no evidence
-    of spatial displacement toward neighboring regions. To test the robustness of these results,
-    I exploit Croatia’s 2023 Schengen accession as an exogenous policy shock, which coincided
-    with a decline in both pushbacks and deaths. Overall, the findings provide causal evidence
-    that deterrence-based border enforcement increases mortality among people on the move.
-  </p>
-</div>
-
-</div>
-
-
-  <!-- WORKS IN PROGRESS -->
-<h2>Works in Progress</h2>
-<ul class="wip">
-
-  <li>
-    <em>Interethnic Contact and Cultural Openness among Youth in Lombardy</em> 
-    (with
-    <a href="https://faculty.unibocconi.it/carlodevillanova/e" target="_blank" rel="noopener noreferrer">Carlo Devillanova</a>)
-  </li>
-
-  <li>
-    <em>Reassessing Sex and Gender Measurement in European Survey Infrastructures</em>
-    (with
-    <a href="https://faculty.unibocconi.it/mariaerrico/" target="_blank" rel="noopener noreferrer">Maria Errico</a>)
-  </li>
-
-  <li>
-    <em>Conservative Gender Attitudes and Singlehood Among European Men</em>
-    (with
-    <a href="https://sps.unibocconi.eu/faculty/letizia-mencarini" target="_blank" rel="noopener noreferrer">Letizia Mencarini</a>
-    and
-    <a href="https://dondena.unibocconi.eu/elena-bastianelli" target="_blank" rel="noopener noreferrer">Elena Bastianelli</a>)
-  </li>
-
-  <li>
-    <em>The Generations and Gender Survey Round II (GGS-II) in Italy</em>
-    (with
-    <a href="https://faculty.unibocconi.it/nicolocavalli/" target="_blank" rel="noopener noreferrer">Nicolò Cavalli</a>,
-    <a href="https://scholar.google.com/citations?user=5oqFx0EAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Nicolò Marchesini</a>,
-    <a href="https://faculty.unibocconi.it/elenamarseglia/" target="_blank" rel="noopener noreferrer">Elena Marseglia</a>,
-    <a href="https://sps.unibocconi.eu/faculty/letizia-mencarini" target="_blank" rel="noopener noreferrer">Letizia Mencarini</a>,
-    <a href="https://www.irpps.cnr.it/ilaria-primerano/" target="_blank" rel="noopener noreferrer">Ilaria Primerano</a>,
-    and
-    <a href="https://www.irpps.cnr.it/michele-santurro/" target="_blank" rel="noopener noreferrer">Michele Santurro</a>)
-  </li>
-
-</ul>
-
+      <a href="https://www.irpps.cnr.it/michele-santurro/" target="_blank" rel="noopener noreferrer">Michele Santurro</a>)
+    </li>
+  </ul>
 
 </main>
 
@@ -330,6 +347,12 @@
   const d = new Date();
   document.getElementById('y').textContent = d.getFullYear();
   document.getElementById('d').textContent = d.toLocaleDateString();
+
+  function toggleAbstract(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.hidden = !el.hidden;
+  }
 </script>
 
 </body>
