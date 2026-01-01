@@ -7,30 +7,43 @@
   <meta name="description" content="Matilde Perotti — About" />
   <link rel="stylesheet" href="styles.css" />
 
-  <!-- Minimal layout CSS to place image next to text -->
   <style>
+    /* Layout like Francesco (image left, text right) */
     .hero {
       display: flex;
       align-items: flex-start;
-      gap: 2rem;
-      max-width: 1000px;
+      gap: 2.5rem;
+      max-width: 1050px;
       margin: 0 auto;
-      padding: 1.5rem 1rem;
+      padding: 2.25rem 1rem;
     }
     .hero .avatar {
-      width: 190px;
-      max-width: 40vw;
-      border-radius: 10px;
+      width: 240px;
+      max-width: 42vw;
+      border-radius: 14px;
       flex: 0 0 auto;
+      object-fit: cover;
     }
     .hero .content {
       flex: 1 1 auto;
+      min-width: 0;
+    }
+    .hero h1 {
+      margin: 0 0 .35rem 0;
+      font-weight: 600;
+      letter-spacing: .2px;
     }
     .subtitle {
-      margin-top: 0.25rem;
+      margin: 0 0 1.5rem 0;
       color: #555;
-      line-height: 1.4;
+      line-height: 1.45;
     }
+    .content p {
+      margin: 0 0 1.1rem 0;
+      line-height: 1.7;
+    }
+
+    /* Mobile */
     @media (max-width: 720px) {
       .hero {
         flex-direction: column;
@@ -38,12 +51,13 @@
         text-align: center;
       }
       .hero .content {
-        text-align: left; /* keeps paragraphs easy to read */
         width: 100%;
+        text-align: left;
       }
     }
   </style>
 </head>
+
 <body>
 <header>
   <nav class="nav" aria-label="Primary">
@@ -63,6 +77,7 @@
 <main class="container">
   <section id="about" class="hero" aria-labelledby="about-title">
     <img class="avatar" src="images/matilde-perotti.jpg" alt="Portrait of Matilde Perotti" />
+
     <div class="content">
       <h1 id="about-title">Matilde Perotti</h1>
       <p class="subtitle">
@@ -71,15 +86,19 @@
       </p>
 
       <p>
-        Hi, and thanks for visiting my webpage! I am a PhD student in the Department of Social and Political Sciences at Bocconi University. My scholarship is funded by
-        <strong>FOSSR – Fostering Open Science in Social Science Research</strong>, a project supported by the Italian
+        Hi, and thanks for visiting my webpage! I am a PhD student in the Department of Social and Political Sciences at Bocconi University.
+        My scholarship is funded by <strong>FOSSR – Fostering Open Science in Social Science Research</strong>, a project supported by the Italian
         <strong>National Recovery and Resilience Plan (PNRR) – NextGenerationEU</strong> under Grant Agreement
         <strong>MUR IR0000008</strong> (<a href="https://www.fossr.eu/" target="_blank" rel="noopener noreferrer">fossr.eu</a>).
-        As part of FOSSR, I work within the Italian team of the <strong>Generations and Gender Survey</strong>, contributing to the implementation of the Italian wave currently in progress.
+        As part of FOSSR, I work within the Italian team of the <strong>Generations and Gender Survey</strong>, contributing to the implementation
+        of the Italian wave currently in progress.
       </p>
 
       <p>
-    My research examines how young people’s social environments and educational experiences shape their transition to adulthood across Europe. I am also interested in border deterrence practices and the ways migration policies emerge and operate in Europe’s peripheries, drawing on fieldwork and collaborations with grassroots NGOs. Across both areas, I use comparative and mixed-method approaches to understand how institutions, policies, and lived experiences intersect in shaping social inequality and mobility.
+        My research examines how young people’s social environments and educational experiences shape their transition to adulthood across Europe.
+        I am also interested in border deterrence practices and the ways migration policies emerge and operate in Europe’s peripheries, drawing on
+        fieldwork and collaborations with grassroots NGOs. Across both areas, I use comparative and mixed-method approaches to understand how institutions,
+        policies, and lived experiences intersect in shaping social inequality and mobility.
       </p>
     </div>
   </section>
@@ -96,5 +115,6 @@
   document.getElementById('y').textContent = d.getFullYear();
   document.getElementById('d').textContent = d.toLocaleDateString();
 </script>
+
 </body>
 </html>
