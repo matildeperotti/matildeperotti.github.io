@@ -7,7 +7,20 @@
   <meta name="description" content="Matilde Perotti — About" />
   <link rel="stylesheet" href="styles.css" />
 
+  <!-- Google Font for more elegant typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
   <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #eef6f0; /* light green background */
+      color: #222;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+    }
+
     /* Layout like Francesco (image left, text right) */
     .hero {
       display: flex;
@@ -95,10 +108,9 @@
       </p>
 
       <p>
-        My research examines how young people’s social environments and educational experiences shape their transition to adulthood across Europe.
-        I am also interested in border deterrence practices and the ways migration policies emerge and operate in Europe’s peripheries, drawing on
-        fieldwork and collaborations with grassroots NGOs. Across both areas, I use comparative and mixed-method approaches to understand how institutions,
-        policies, and lived experiences intersect in shaping social inequality and mobility.
+        My research interests lie at the intersection of <strong>political sociology, demography, and migration</strong>. I study how ethnically diverse environments
+        in contemporary Europe shape socio-demographic outcomes, including attitudes toward migrants and gender, as well as fertility and family
+        formation. In my work, I use both observational and experimental methods.
       </p>
     </div>
   </section>
@@ -106,15 +118,15 @@
 
 <footer>
   <div class="container small">
-    © <span id="y"></span> Matilde Perotti • Last updated <span id="d"></span>
+    © <span id="y"></span> Matilde Perotti
   </div>
 </footer>
 
 <script>
   const d = new Date();
   document.getElementById('y').textContent = d.getFullYear();
-  document.getElementById('d').textContent = d.toLocaleDateString();
 </script>
 
 </body>
 </html>
+
