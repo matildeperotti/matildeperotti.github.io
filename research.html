@@ -8,8 +8,13 @@
   <link rel="stylesheet" href="styles.css" />
 
   <style>
+    body{
+      font-size: 15px;
+      color: #222;
+    }
+
     main.container{
-      max-width: 980px;
+      max-width: 900px;
       margin: 0 auto;
       padding: 2.25rem 1rem;
       line-height: 1.65;
@@ -17,157 +22,108 @@
 
     h1{
       font-weight: 600;
+      font-size: 2rem;
       margin: 0 0 1.4rem 0;
       letter-spacing: .2px;
     }
 
-    /* Section headings like Francesco */
     h2{
       font-weight: 500;
-      font-size: 2.2rem;
-      margin: 2.6rem 0 1.2rem 0;
-      padding-bottom: 1rem;
+      font-size: 1.75rem;
+      margin: 2.4rem 0 1rem 0;
+      padding-bottom: .8rem;
       border-bottom: 1px solid #e6e6e6;
       letter-spacing: .2px;
     }
 
-    /* Francesco-like publication rows */
-    .pub-row{
-      position: relative;
-      display: grid;
-      grid-template-columns: 140px 1fr;
-      gap: 1.75rem;
-      padding: 1.35rem 0 1.35rem 0;
+    .pub-item,
+    .wp-item{
+      padding: 1.1rem 0;
       border-bottom: 1px solid #ededed;
-      align-items: start;
     }
 
-    /* faint year on the right */
-    .pub-year{
-      position: absolute;
-      right: 0;
-      top: .7rem;
-      font-size: 3.2rem;
-      font-weight: 300;
-      color: #f0f0f0;
-      letter-spacing: 1px;
-      pointer-events: none;
-      user-select: none;
-      line-height: 1;
-    }
-
-    .cover{
-      width: 120px;
-      height: 160px;
-      border-radius: 6px;
-      background: #f3f3f3;
-      border: 1px solid #e7e7e7;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .cover img{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-    .cover.placeholder{
-      font-size: .9rem;
-      color: #777;
-      text-align: center;
-      padding: .75rem;
-    }
-
-    .pub-title{
+    .pub-title,
+    .wp-title{
       font-weight: 600;
+      font-size: 1rem;
       margin: 0 0 .35rem 0;
     }
 
-    .pub-authors{
-      margin: 0 0 .35rem 0;
+    .pub-authors,
+    .wp-authors{
+      margin: 0 0 .45rem 0;
       color: #333;
+      font-size: .95rem;
     }
 
     .pub-venue{
       margin: 0 0 .8rem 0;
       color: #111;
+      font-size: .95rem;
     }
-    .pub-venue em{ font-style: italic; }
+
+    .pub-venue em{
+      font-style: italic;
+    }
 
     .btns{
       display: flex;
-      gap: .8rem;
+      gap: .7rem;
       flex-wrap: wrap;
       margin-top: .2rem;
     }
+
     .btn{
       display: inline-block;
-      padding: .45rem .9rem;
+      padding: .4rem .8rem;
       border: 1px solid #111;
       border-radius: 3px;
       background: transparent;
       color: #111;
-      font-size: .8rem;
-      letter-spacing: .6px;
+      font-size: .75rem;
+      letter-spacing: .5px;
       text-transform: uppercase;
       text-decoration: none;
       cursor: pointer;
     }
+
     .btn:hover{
       background: #111;
       color: #fff;
     }
 
-    /* Working papers */
-    .wp-item{
-      padding: 1.1rem 0;
-      border-bottom: 1px solid #ededed;
-    }
-    .wp-title{
-      font-weight: 600;
-      margin: 0 0 .35rem 0;
-    }
-    .wp-authors{
-      margin: 0 0 .7rem 0;
-      color: #333;
-    }
-
-    /* Abstract box */
     .wp-abstract{
       margin-top: .75rem;
       padding: .75rem .9rem;
       border-left: 3px solid #c07a00;
       background: #fafafa;
-      font-size: .95rem;
+      font-size: .92rem;
       line-height: 1.6;
     }
 
-    /* Works in progress list */
     ul.wip{
       margin: 0;
       padding-left: 1.2rem;
     }
+
     ul.wip li{
       margin: .6rem 0;
+      font-size: .95rem;
     }
 
-    /* ====== Make ALL names orange ====== */
-    /* Links in publications, working papers, and WIP */
     .pub-authors a,
     .wp-authors a,
     .wip a{
       color: #c07a00;
       text-decoration: none;
     }
+
     .pub-authors a:hover,
     .wp-authors a:hover,
     .wip a:hover{
       text-decoration: underline;
     }
 
-    /* Your non-link name in author lists (e.g., <strong>Matilde Perotti</strong>) */
     .pub-authors strong,
     .wp-authors strong,
     .wip strong{
@@ -176,16 +132,16 @@
     }
 
     @media (max-width: 760px){
-      .pub-row{
-        grid-template-columns: 1fr;
+      body{
+        font-size: 14px;
       }
-      .cover{
-        width: 140px;
-        height: 180px;
+
+      h1{
+        font-size: 1.8rem;
       }
-      .pub-year{
-        font-size: 2.4rem;
-        top: .9rem;
+
+      h2{
+        font-size: 1.5rem;
       }
     }
   </style>
@@ -211,62 +167,48 @@
 
   <h1>Research</h1>
 
-  <!-- PUBLICATIONS -->
   <h2>Publications</h2>
 
-  <article class="pub-row">
-    <div class="pub-year">2025</div>
+  <div class="pub-item">
+    <p class="pub-title">
+      GGS: Generations and Gender Survey
+    </p>
 
-    <div class="cover">
-      <img
-        src="images/Longitudinal_Data_Infrastrucres_in_Europe.jpg"
-        alt="Cover of Longitudinal Data Infrastructures in Europe"
-      />
+    <p class="pub-authors">
+      <a href="https://faculty.unibocconi.it/nicolocavalli/" target="_blank" rel="noopener noreferrer">Nicolò Cavalli</a>,
+      <a href="https://scholar.google.com/citations?user=5oqFx0EAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Nicolò Marchesini</a>,
+      <a href="https://faculty.unibocconi.it/elenamarseglia/" target="_blank" rel="noopener noreferrer">Elena Marseglia</a>,
+      <a href="https://sps.unibocconi.eu/faculty/letizia-mencarini" target="_blank" rel="noopener noreferrer">Letizia Mencarini</a>,
+      <strong>Matilde Perotti</strong>,
+      <a href="https://www.irpps.cnr.it/ilaria-primerano/" target="_blank" rel="noopener noreferrer">Ilaria Primerano</a>,
+      and
+      <a href="https://www.irpps.cnr.it/michele-santurro/" target="_blank" rel="noopener noreferrer">Michele Santurro</a>
+    </p>
+
+    <p class="pub-venue">
+      Chapter in <em>Longitudinal Data Infrastructures in Europe</em>, Springer Nature, pp. 131–140
+    </p>
+
+    <div class="btns">
+      <a
+        class="btn"
+        href="https://link.springer.com/chapter/10.1007/978-3-032-07005-0_10"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Chapter
+      </a>
+      <a
+        class="btn"
+        href="https://link.springer.com/content/pdf/10.1007/978-3-032-07005-0_10.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Open Access
+      </a>
     </div>
+  </div>
 
-    <div>
-      <p class="pub-title">
-        GGS: Generations and Gender Survey
-      </p>
-
-      <p class="pub-authors">
-        <a href="https://faculty.unibocconi.it/nicolocavalli/" target="_blank" rel="noopener noreferrer">Nicolò Cavalli</a>,
-        <a href="https://scholar.google.com/citations?user=5oqFx0EAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Nicolò Marchesini</a>,
-        <a href="https://faculty.unibocconi.it/elenamarseglia/" target="_blank" rel="noopener noreferrer">Elena Marseglia</a>,
-        <a href="https://sps.unibocconi.eu/faculty/letizia-mencarini" target="_blank" rel="noopener noreferrer">Letizia Mencarini</a>,
-        <strong>Matilde Perotti</strong>,
-        <a href="https://www.irpps.cnr.it/ilaria-primerano/" target="_blank" rel="noopener noreferrer">Ilaria Primerano</a>,
-        and
-        <a href="https://www.irpps.cnr.it/michele-santurro/" target="_blank" rel="noopener noreferrer">Michele Santurro</a>
-      </p>
-
-      <p class="pub-venue">
-        Chapter in <em>Longitudinal Data Infrastructures in Europe</em>,
-        Springer Nature, 2025, pp. 131–140
-      </p>
-
-      <div class="btns">
-        <a
-          class="btn"
-          href="https://link.springer.com/chapter/10.1007/978-3-032-07005-0_10"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Chapter
-        </a>
-        <a
-          class="btn"
-          href="https://link.springer.com/content/pdf/10.1007/978-3-032-07005-0_10.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Open Access
-        </a>
-      </div>
-    </div>
-  </article>
-
-  <!-- WORKING PAPERS -->
   <h2>Working Papers</h2>
 
   <div class="wp-item">
@@ -322,13 +264,12 @@
 
     <p class="wp-authors">
       <strong>Matilde Perotti</strong>,
-      <a href="https://sps.unibocconi.eu/faculty/letizia-mencarini" target="_blank" rel="noopener noreferrer">Letizia Mencarini</a>
-      and
       <a href="https://dondena.unibocconi.eu/elena-bastianelli" target="_blank" rel="noopener noreferrer">Elena Bastianelli</a>
+      and
+      <a href="https://sps.unibocconi.eu/faculty/letizia-mencarini" target="_blank" rel="noopener noreferrer">Letizia Mencarini</a>
     </p>
   </div>
 
-  <!-- WORKS IN PROGRESS -->
   <h2>Works in Progress</h2>
   <ul class="wip">
     <li>
@@ -349,3 +290,25 @@
       <a href="https://www.irpps.cnr.it/michele-santurro/" target="_blank" rel="noopener noreferrer">Michele Santurro</a>)
     </li>
   </ul>
+
+</main>
+
+<footer>
+  <div class="container small">
+    © <span id="y"></span> Matilde Perotti
+  </div>
+</footer>
+
+<script>
+  const d = new Date();
+  document.getElementById('y').textContent = d.getFullYear();
+
+  function toggleAbstract(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.hidden = !el.hidden;
+  }
+</script>
+
+</body>
+</html>
