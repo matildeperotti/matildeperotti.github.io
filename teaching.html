@@ -60,11 +60,6 @@
       border-bottom: 1px solid #eee;
     }
 
-    .course-head{
-      display: flex;
-      gap: 1rem;
-    }
-
     .course-line{
       margin: 0;
       font-weight: 600;
@@ -126,6 +121,7 @@
     <strong>Bocconi University</strong>.
   </p>
 
+  <!-- Teaching Assistant & Lecturer -->
   <section class="uni">
     <h2 class="role-title">Teaching Assistant & Lecturer</h2>
 
@@ -133,8 +129,7 @@
 
       <li class="course-item">
         <p class="course-line">
-          <a href="https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=20613&anno=2026&ordin=IR&IdPag=6625"
-             target="_blank" rel="noopener noreferrer">
+          <a href="https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=20613&anno=2026&ordin=IR&IdPag=6625" target="_blank">
             <span class="course-code">20613</span> — Political Science – Module 2 (International Relations and Politics)
           </a>
         </p>
@@ -148,16 +143,14 @@
 
       <li class="course-item">
         <p class="course-line">
-          <a href="https://didattica.unibocconi.it/ts/tsn_anteprima.php?cod_ins=20609&anno=2025&IdPag=7961"
-             target="_blank" rel="noopener noreferrer">
+          <a href="https://didattica.unibocconi.it/ts/tsn_anteprima.php?cod_ins=20609&anno=2025&IdPag=7961" target="_blank">
             <span class="course-code">20609</span> — Public Administration
           </a>
         </p>
         <div class="course-year">2024/2025 – 2025/2026</div>
         <div class="course-meta">
           <strong>Role:</strong> Teaching Assistant<br />
-          <strong>2025/2026:</strong> (Profs. Rebecca Kirley and Barbara Zyzak) — Proctoring; support with course materials
-          and assessments; group work assistance; hosted one lecture:
+          <strong>2025/2026:</strong> (Profs. Rebecca Kirley and Barbara Zyzak) — Proctoring; support with course materials and assessments; group work assistance; hosted one lecture:
           <em>“Understanding Institutional and Racial Discrimination through a Critical Institutional Lens.”</em><br />
           <strong>2024/2025:</strong> (Prof. Marlene Jugl) — Proctoring; exam grading.
         </div>
@@ -166,6 +159,7 @@
     </ul>
   </section>
 
+  <!-- Teaching Assistant -->
   <section class="uni">
     <h2 class="role-title">Teaching Assistant</h2>
 
@@ -173,19 +167,52 @@
 
       <li class="course-item">
         <p class="course-line">
-          <a href="https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=20888&anno=2026"
-             target="_blank" rel="noopener noreferrer">
+          <a href="https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=20888&anno=2026" target="_blank">
             <span class="course-code">20888</span> — Foundations of Social Sciences – Module II A
           </a>
         </p>
         <div class="course-year">2024/2025 – 2025/2026</div>
         <div class="course-meta">
-          <strong>2025/2026:</strong> (Prof. Marlene Jugl) — Proctoring; support with course materials and assessments.<br />
-          <strong>2024/2025:</strong> (Profs. Michele Bee and Alessandro Sancino) — Proctoring; support with course materials and assessments.
+          <strong>2025/2026:</strong> (Prof. Marlene Jugl)<br />
+          <strong>2024/2025:</strong> (Profs. Michele Bee and Alessandro Sancino)
         </div>
       </li>
 
-      <!-- remaining items unchanged -->
+      <li class="course-item">
+        <p class="course-line">
+          <a href="https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30341&anno=2026" target="_blank">
+            <span class="course-code">30341</span> — Management of Government Organizations
+          </a>
+        </p>
+        <div class="course-year">2024/2025 – 2025/2026</div>
+      </li>
+
+      <li class="course-item">
+        <p class="course-line">
+          <a href="https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30528&anno=2025" target="_blank">
+            <span class="course-code">30528</span> — Sociology
+          </a>
+        </p>
+        <div class="course-year">2024/2025 – 2025/2026</div>
+      </li>
+
+      <li class="course-item">
+        <p class="course-line">
+          <a href="https://didattica.unibocconi.eu/ts/tsn_anteprima.php?cod_ins=30282&anno=2025" target="_blank">
+            <span class="course-code">30282</span> — Globalization, Societies and Institutions
+          </a>
+        </p>
+        <div class="course-year">2025/2026</div>
+      </li>
+
+      <li class="course-item">
+        <p class="course-line">
+          <a href="https://didattica.unibocconi.it/ts/tsn_anteprima.php?cod_ins=30198&anno=2024" target="_blank">
+            <span class="course-code">30198</span> — Storia dell’Impresa Italiana
+          </a>
+        </p>
+        <div class="course-year">2024/2025</div>
+      </li>
 
     </ul>
   </section>
@@ -193,14 +220,13 @@
 
 <footer>
   <div class="container small">
-    © <span id="y"></span> Matilde Perotti • Last updated <span id="d"></span>
+    © <span id="y"></span> Matilde Perotti
   </div>
 </footer>
 
 <script>
   const d = new Date();
   document.getElementById('y').textContent = d.getFullYear();
-  document.getElementById('d').textContent = d.toLocaleDateString();
 </script>
 
 </body>
