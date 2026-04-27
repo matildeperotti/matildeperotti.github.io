@@ -8,26 +8,39 @@
   <link rel="stylesheet" href="styles.css" />
 
   <style>
+    body {
+      color: #222;
+    }
+
+    a {
+      color: #4a8f6a;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
     main.container {
       max-width: 900px;
       margin: 0 auto;
       padding: 2rem 1rem;
       line-height: 1.6;
     }
+
     h1 {
       font-weight: 600;
       margin-bottom: 1.5rem;
     }
+
     p {
       margin-bottom: 0.8rem;
     }
+
+    /* keep class for flexibility, but align with global style */
     a.link {
-      color: #0044cc;
-      text-decoration: none;
+      color: #4a8f6a;
       font-weight: 500;
-    }
-    a.link:hover {
-      text-decoration: underline;
     }
   </style>
 </head>
@@ -35,7 +48,9 @@
 <body>
 <header>
   <nav class="nav" aria-label="Primary">
-    <div class="brand"><a href="index.html" style="text-decoration:none;color:inherit">Matilde Perotti</a></div>
+    <div class="brand">
+      <a href="index.html" style="text-decoration:none;color:inherit">Matilde Perotti</a>
+    </div>
     <div class="tabs">
       <a href="index.html">About</a>
       <a href="research.html">Research</a>
@@ -52,7 +67,12 @@
   <p><strong>Email:</strong> matilde.perotti@phd.unibocconi.it</p>
   <p><strong>Office:</strong> DONDENA Centre – Bocconi University,<br/>
   Via Roentgen 1, 20136 Milan (Italy)</p>
-  <p><a class="link" href="https://www.linkedin.com/in/matilde-perotti-19a0b41a7/" target="_blank" rel="noopener">LinkedIn</a></p>
+
+  <p>
+    <a class="link" href="https://www.linkedin.com/in/matilde-perotti-19a0b41a7/" target="_blank" rel="noopener">
+      LinkedIn
+    </a>
+  </p>
 </main>
 
 <footer>
