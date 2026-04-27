@@ -37,7 +37,6 @@
       margin-bottom: 0.8rem;
     }
 
-    /* keep class for flexibility, but align with global style */
     a.link {
       color: #4a8f6a;
       font-weight: 500;
@@ -77,14 +76,13 @@
 
 <footer>
   <div class="container small">
-    © <span id="y"></span> Matilde Perotti • Last updated <span id="d"></span>
+    © <span id="y"></span> Matilde Perotti
   </div>
 </footer>
 
 <script>
   const d = new Date();
   document.getElementById('y').textContent = d.getFullYear();
-  document.getElementById('d').textContent = d.toLocaleDateString();
 </script>
 
 </body>
